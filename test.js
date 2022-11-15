@@ -1,41 +1,15 @@
-let id = 1;
+const arr = [1, 2, 3, 4, 5, 6];
 
-class Ameba {
-  constructor(id) {
-    this.id = id;
-    this.x = 300;
-    this.y = 300;
-    this.steps = 2;
-    this.vitality = 30;
-    this.fertility = true;
-    this.aptosis = false;
-  }
-  mind(saludo) {
-    setInterval(() => {
-      console.log("Hola soy " + this.id + saludo);
+console.log(arr.length);
 
-      const r = Math.random();
-      const re = Math.random();
+arr.splice(0, 1);
 
-      if (this.vitality >= 30 && this.fertility == true) {
-        if (r < 0.5) {
-          if (re < 0.7) {
-            console.log(`Yo ${this.id} me dupliqué`);
-            this.fertility = false;
-          }
-          mitosis();
-        } else {
-        }
-      }
-    }, 3000);
-  }
-}
+console.log(arr.length);
 
-const mitosis = () => {
-  id++;
-  const sonAmeba = new Ameba(id);
-  sonAmeba.mind(" Hijo de Adam");
-};
+let position = arr.findIndex((i) => i == 4);
+console.log(position);
 
-const Adan = new Ameba("Adam");
-Adan.mind(" ");
+arr.splice(position, 1);
+
+console.log(arr.length);
+console.log(arr);

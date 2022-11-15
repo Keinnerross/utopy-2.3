@@ -12,6 +12,8 @@ class Ameba {
   }
   mind(saludo) {
     setInterval(() => {
+      console.log("Hola soy " + this.id + saludo);
+
       const r = Math.random();
 
       if (this.vitality >= 30) {
@@ -23,7 +25,6 @@ class Ameba {
           //   aptosis()
         }
       }
-      console.log("Hola soy " + this.id + saludo);
     }, 3000);
   }
 }
