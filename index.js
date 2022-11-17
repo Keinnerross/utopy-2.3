@@ -26,12 +26,12 @@ function draw() {
       const all = () => {
         const r = Math.random();
         const re = Math.random();
-        console.log("Hola soy " + this.id + saludo);
+        // console.log("Hola soy " + this.id + saludo);
 
         if (this.vitality >= 30 && this.aptosis == 0) {
           if (r < 0.5) {
             if (re < 0.2) {
-              console.log(`Yo ${this.id} aptosis 1`);
+              // console.log(`Yo ${this.id} aptosis 1`);
               this.aptosis = 1;
             }
             mitosis();
@@ -43,11 +43,11 @@ function draw() {
             this.aptosis = 2;
             clearInterval(thought);
             muertes++;
-            console.log(`${this.id} ha muerto`);
+            // console.log(`${this.id} ha muerto`);
           }, 1500);
         }
       };
-      let thought = setInterval(all, 1000/*floor(random(4) + 5) * 1000*/);
+      let thought = setInterval(all, floor(random(3) + 1) * 1000);
     }
 
     skin() {
